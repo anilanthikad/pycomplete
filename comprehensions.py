@@ -46,21 +46,21 @@
 
 # --------------------------------------------------
 
-friends = ['Ralph', 'Bobby', 'Jon', 'Charlie', 'Anne']
-guests = ['jose', 'mathai', 'Ralph', 'Charlie', 'Jen']
-
-friends_lower = set([f.lower() for f in friends])
-# guests_lower = set([g.lower() for g in guests])  #
+# friends = ['Ralph', 'Bobby', 'Jon', 'Charlie', 'Anne']
+# guests = ['jose', 'mathai', 'Ralph', 'Charlie', 'Jen']
+#
+# friends_lower = set([f.lower() for f in friends])
+# # guests_lower = set([g.lower() for g in guests])  # not needed for the comprehension method
 
 # print(friends_lower.intersection(guests_lower))  # Cant get titlecase in this method.
 
 # so...
-present_friends = [
-    name.title()
-    for name in guests
-    if name.lower() in friends_lower
-]
-print(present_friends)
+# present_friends = [
+#     name.title()
+#     for name in guests
+#     if name.lower() in friends_lower
+# ]
+# print(present_friends)
 
 # ==================================================
 # ==================================================
@@ -68,4 +68,26 @@ print(present_friends)
 # Set and Dictionary comprehensions
 # ==================================
 
+# friends = ['Ralph', 'Bobby', 'Jon', 'Charlie', 'Anne']
+# guests = ['jose', 'mathai', 'Ralph', 'Charlie', 'Jen']
+
+# friends_lower = {f.lower() for f in friends}
+# guests_lower = {g.lower() for g in guests}
+#
+# present_friends = {name.title()
+#                    for name in friends_lower.intersection(guests_lower)}
+#
+# print(present_friends)
+
+# --------------------------------------------------
+
+friends = ['Ralph', 'Bobby', 'Jon', 'Charlie', 'Anne']
+time_since_seen = [3, 7, 8, 9, 12]
+
+long_timers = {
+    friends[i]: time_since_seen[i]  # we get a dictionary
+    for i in range(len(friends))
+    if time_since_seen[i] > 5  # to check friends seen less than 5 years
+}
+print(long_timers)
 
