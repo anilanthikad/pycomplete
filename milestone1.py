@@ -87,7 +87,7 @@ def find_by_attribute(items, expected, finder):
         if finder(i) == expected:
             found.append(i)
 
-        return found
+    return found
 
 
 menu()
