@@ -39,7 +39,7 @@ def menu():
         else:
             print('Unknown command, please try again!')
 
-        user_input = input("Enter 'a' to add a movie, 'l' to see your movie, 'f' to find a movie and 'q' to quit: ")
+        user_input = input("\nEnter 'a' to add a movie, 'l' to see your movie, 'f' to find a movie and 'q' to quit: ")
 
 
 def add_movie():
@@ -54,6 +54,16 @@ def add_movie():
     })
 
 
+def show_movie():
+    for movie in movies:
+        show_movie_details(movie)
+
+
+def show_movie_details(movie):
+    print(f"Name: {movie['name']}")
+    print(f"Director: {movie['director']}")
+    print(f"Year: {movie['year']}")
+
+
 menu()
 
-print(movies)
