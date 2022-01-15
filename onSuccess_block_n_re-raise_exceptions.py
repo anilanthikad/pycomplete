@@ -14,6 +14,7 @@ def get_user_score(user):
         print('Incorrect values provided to our calculation function.')
         raise
 
+
 def perform_calculation(metrics):
     return metrics['clicks'] * 5 + metrics['hits'] * 2
 
@@ -24,4 +25,3 @@ def send_engagement_notification(user):
 
 my_user = User('Ralph', {'clicks': 61, 'hits': 100})
 get_user_score(my_user)
-
