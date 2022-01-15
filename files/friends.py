@@ -4,43 +4,23 @@
 
 # hint: readlines()
 
-nearby_friends = []
+friends = input('Enter three friends names,'
+                ' separated by commas (no spaces please): ').split(',')
 
-user_friend1 = input('Enter first friends name: ')
-user_friend2 = input('Enter second friends name: ')
-user_friend3 = input('Enter third friends name: ')
+people = open('people.txt', 'r')
+people_nearby = [line.strip() for line in people.readlines()]
+people.close()
 
-nearby_friends.append(user_friend1)
-nearby_friends.append(user_friend2)
-nearby_friends.append(user_friend3)
+friends_set = set(friends)
+people_nearby_set = set(people_nearby)
 
-# print(nearby_friends)
+friends_nearby_set = friends_set.intersection(people_nearby_set)
 
-people_list = open('people.txt', 'r')
-people_content = people_list.read()
+nearby_friends_file = open('nearby_friends.txt', 'w')
 
-
-# print(people_content)
-
-for name in nearby_friends:
-    if name in people_content:
-        # add_name = []
-        nrby_frnds = open('nearby_friends.txt', 'a')
-        nrby_frnds.write(name)
-        nrby_frnds.close()
-
-        # add_name.append(name)
-# people_content.close()
-
-nearby_list = open('nearby_friends.txt', 'r')
-final_list = nearby_list.read()
-nearby_list.close()
-people_list.close()
-print(final_list)
+for friend in friends_nearby_set:
+    print(f'{friend} is nearby! Meet up with them.')
+    nearby_friends_file.write(f'{friend}\n')
 
 
-
-
-
-
-
+nearby_friends_file.close()
