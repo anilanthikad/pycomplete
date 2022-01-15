@@ -2,9 +2,7 @@ import json
 
 # with open('friends_json.txt', 'r') as file:
 #     file_content = json.load(file)  # reads file and turns it into a dictionary.
-#
-# file.close()
-#
+
 # print(file_content['friends'][1])
 
 # ================================================
@@ -17,7 +15,7 @@ import json
 #
 # with open('cars_json.txt', 'w') as file:
 #     json.dump(cars, file)
-# file.close()
+
 
 # ================================================
 # "loads" to change a json str to dict
