@@ -1,4 +1,3 @@
-# from utils import database
 from utils import database_csv
 
 USER_CHOICE = """
@@ -15,6 +14,7 @@ Your choice: """
 
 
 def menu():
+    database_csv.create_book_table()
     user_input = input(USER_CHOICE)
     while user_input != 'q':
         if user_input == 'a':
@@ -41,7 +41,7 @@ def prompt_add_book():  # ask for book name and author
 def list_books():  # show all the books in our list
     books = database_csv.get_all_books()
     for book in books:
-        read = 'YES' if book['read'] else 'NO'
+        read = 'YES' if book['read'] == '1' else 'NO'
         print(f"{book['name']} by {book['author']}, read: {read}")
 
 
