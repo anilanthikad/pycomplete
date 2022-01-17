@@ -40,13 +40,21 @@ def prompt_add_book():  #  ask for book name and author
 def list_books():  #  show all the books in our list
     books = database.get_all_books()
     for book in books:
-        print(book)
+        read = 'YES' if book['read'] else 'NO'
+        print(f"{book['name']} by {book['author']}, read: {'read'}")
+
 
 def prompt_read_book():  #  ask for book name and change it to "read"
-    pass
+    name = input('Enter the name of the book you finished reading: ')
+
+    database.mark_book_as_read(name)
+
 
 def prompt_delete_book():  #  ask the book and delete the book from list
-    pass
+    name = input('Enter the name of the book you wish to delete: ')
+
+    database.delete_book(name)
 
 
+menu()
 
