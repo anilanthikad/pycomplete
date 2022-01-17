@@ -41,7 +41,7 @@ def list_books():  #  show all the books in our list
     books = database.get_all_books()
     for book in books:
         read = 'YES' if book['read'] else 'NO'
-        print(f"{book['name']} by {book['author']}, read: {'read'}")
+        print(f"{book['name']} by {book['author']}, read: {read}")
 
 
 def prompt_read_book():  #  ask for book name and change it to "read"
