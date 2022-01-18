@@ -1,15 +1,7 @@
 from .db_connection import DatabaseConnection
 
 """
-Concerned with storing and retrieving books from a json file.
-
-[
-    {
-        'name': 'book name',
-        'author': 'author name',
-        'read': True
-    }
-]
+Concerned with storing and retrieving books from a database.
 """
 
 
