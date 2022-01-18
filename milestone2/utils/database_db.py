@@ -11,10 +11,6 @@ Concerned with storing and retrieving books from a json file.
     }
 ]
 """
-import json
-
-books_file = 'books.json'
-
 
 def create_book_table():
     connection = sqlite3.connect('data.db')
@@ -36,9 +32,18 @@ def add_book(name, author):
     connection.commit()
     connection.close()
 
+
 def get_all_books():
-    with open(books_file, 'r') as file:
-        return json.load(file)
+    connection = sqlite3.connect('data.db')
+    cursor = connection.cursor()
+
+    cursor.execute('SELECT * FROM books')
+    books = [{'name': row[0], 'author': row[1], 'read': row[2]} for row in
+             cursor.fetchall()]
+
+    connection.close()
+
+    return books
 
 
 def _save_all_books(books):
