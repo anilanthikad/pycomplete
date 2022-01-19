@@ -10,6 +10,8 @@ friends = ['ralph', 'suzi', 'annie', 'james', 'mike', 'randi']
 
 start_with_r = filter(lambda x: x.startswith('r'), friends)  # with lambda
 
+another_starts_with_r = (f for f in friends if f.startswith('r'))
+
 # print(next(start_with_r))
 print(list(start_with_r))
 
