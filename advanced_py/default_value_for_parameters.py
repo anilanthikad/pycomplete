@@ -20,3 +20,5 @@ print(accounts['savings'])
 print(accounts['checking'])
 
 
+# !!!!!!!!!!!! Avoid mutable default arguments !!!!!!!!!!
+
