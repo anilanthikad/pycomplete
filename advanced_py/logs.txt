@@ -1,0 +1,4 @@
+2022-01-21 15:48:10,342 INFO     [logging_intro.py:8] This will not show up
+2022-01-21 15:48:10,343 WARNING  [logging_intro.py:9] This will show up
+2022-01-21 15:48:10,343 DEBUG    [logging_intro.py:10] This is a debug msg
+2022-01-21 15:48:10,343 CRITICAL [logging_intro.py:11] A critical error
