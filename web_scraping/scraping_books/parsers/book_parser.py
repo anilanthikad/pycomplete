@@ -1,6 +1,9 @@
 import re
+import logging
 
 from locators.book_locators import BookLocators
+
+logger = logging.getLogger('scraping.book_parser')
 
 
 class BookParser:
@@ -49,6 +52,7 @@ class BookParser:
 
     @property
     def rating(self):
+        logger.debug('Finding book rating')
         locator = BookLocators.RATING_LOCATOR
         star_rating_tag = self.parent.select_one(locator)
         classes = star_rating_tag.attrs['class']

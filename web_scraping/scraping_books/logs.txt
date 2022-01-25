@@ -1,0 +1,14 @@
+25-01-22 11:37:23 INFO     [app.py:13] Loading books list...
+25-01-22 11:37:23 DEBUG    [connectionpool.py:227] Starting new HTTP connection (1): books.toscrape.com:80
+25-01-22 11:37:25 DEBUG    [connectionpool.py:452] http://books.toscrape.com:80 "GET / HTTP/1.1" 200 None
+25-01-22 11:44:11 INFO     [app.py:13] Loading books list...
+25-01-22 11:44:11 DEBUG    [connectionpool.py:227] Starting new HTTP connection (1): books.toscrape.com:80
+25-01-22 11:44:12 DEBUG    [connectionpool.py:452] http://books.toscrape.com:80 "GET / HTTP/1.1" 200 None
+25-01-22 11:46:47 INFO     [app.py:13] Loading books list...
+25-01-22 11:46:47 DEBUG    [connectionpool.py:227] Starting new HTTP connection (1): books.toscrape.com:80
+25-01-22 11:46:47 DEBUG    [connectionpool.py:452] http://books.toscrape.com:80 "GET / HTTP/1.1" 200 None
+25-01-22 11:46:47 DEBUG    [all_books_page.py:13] Parsing page content with BeautifulSoup HTML parser
+25-01-22 11:55:43 INFO     [app.py:13] Loading books list...
+25-01-22 11:55:43 DEBUG    [connectionpool.py:227] Starting new HTTP connection (1): books.toscrape.com:80
+25-01-22 11:55:43 DEBUG    [connectionpool.py:452] http://books.toscrape.com:80 "GET / HTTP/1.1" 200 None
+25-01-22 11:55:44 DEBUG    [all_books_page.py:13] Parsing page content with BeautifulSoup HTML parser
