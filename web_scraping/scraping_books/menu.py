@@ -39,15 +39,34 @@ def get_next_book():
     print(next(books_generator))
 
 
+# def menu():
+#     user_input = input(USER_CHOICES)
+#     while user_input != 'q':
+#         if user_input == 'b':
+#             print_best_books()
+#         elif user_input == 'c':
+#             print_cheapest_books()
+#         elif user_input == 'n':
+#             get_next_book()
+#         else:
+#             print('Please choose a valid Choice.')
+#         user_input = input(USER_CHOICES)
+
+# Alternative way of ^
+# ======================
+
+user_choices = {
+    'b': print_best_books,
+    'c': print_cheapest_books,
+    'n': get_next_book
+}
+
+
 def menu():
     user_input = input(USER_CHOICES)
     while user_input != 'q':
-        if user_input == 'b':
-            print_best_books()
-        elif user_input == 'c':
-            print_cheapest_books()
-        elif user_input == 'n':
-            get_next_book()
+        if user_input in ('b', 'c', 'n'):
+            user_choices[user_input]()
         else:
             print('Please choose a valid Choice.')
         user_input = input(USER_CHOICES)
