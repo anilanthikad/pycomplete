@@ -11,10 +11,9 @@ def user_has_permission(func):
     return secure_func()
 
 
+@user_has_permission
 def my_function():
     return 'Password for admin panel is 1234'
 
 
-my_secure_function = user_has_permission(my_function)
-
-print(my_secure_function())
+print(my_function())
